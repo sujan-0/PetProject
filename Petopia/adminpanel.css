@@ -1,0 +1,22 @@
+/* admin.css */
+
+.admin-wrapper {
+    text-align: center;
+  }
+  
+  .admin {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 500;
+    font-size: 24px; /* Adjust size as needed */
+    margin-bottom: 10px; /* Add some margin below the admin text */
+  }
+  
+  .petopia {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 600; /* Adjust weight as needed */
+    font-size: 36px; /* Adjust size as needed */
+    margin-bottom: 10px; /* Add some margin below the petopia text */
+  }
+  
+  /* Add any other necessary styling for your navbar */
+  
