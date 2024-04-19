@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Query Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .invalid-feedback {
+            color: #dc3545;
+        }
+
+        .btn-primary {
+            background-color: #1bc564;
+            border-color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0d5e16;
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Pet Adoption Query Form</h1>
+        <form action="submit_form.php" method="post" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input type="tel" class="form-control" id="contact" name="contact" pattern="[0-9]{10}" required>
+                <div class="invalid-feedback">Please enter a valid 10-digit contact number.</div>
+            </div>
+            <div class="form-group">
+                <label for="petName">Pet's Name:</label>
+                <input type="text" class="form-control" id="petName" name="petName">
+            </div>
+            <div class="form-group">
+                <label for="petType">Pet Type:</label>
+                <select class="form-control" id="petType" name="petType" required>
+                    <option value="" disabled selected>Select Pet Type</option>
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Bird">Bird</option>
+                    <option value="Rabbit">Rabbit</option>
+                </select>
+                <div class="invalid-feedback">Please select a pet type.</div>
+            </div>
+            <div class="form-group">
+                <label for="breed">Breed:</label>
+                <input type="text" class="form-control" id="breed" name="breed">
+                <small class="form-text text-muted">Optional</small>
+            </div>
+            <div class="form-group">
+                <label for="queries">Additional Queries:</label>
+                <textarea class="form-control" id="queries" name="queries" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Inquire Us</button>
+        </form>
+    </div>
+</body>
+</html>
